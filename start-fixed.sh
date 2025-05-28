@@ -12,13 +12,13 @@ echo ""
 
 # Clean up any existing processes
 echo "🧹 Cleaning up existing processes..."
-pkill -f "server-n8n-optimized.mjs" 2>/dev/null || true
+pkill -f "server-n8n-with-login.mjs" 2>/dev/null || true
 pkill -f "chrome" 2>/dev/null || true
 sleep 2
 
 # Check if the server file exists
-if [ ! -f "server-n8n-optimized.mjs" ]; then
-    echo "❌ server-n8n-optimized.mjs not found!"
+if [ ! -f "server-n8n-with-login.mjs" ]; then
+    echo "❌ server-n8n-with-login.mjs not found!"
     echo "💡 Make sure you're in the correct directory"
     exit 1
 fi
@@ -29,4 +29,4 @@ echo ""
 
 # Start the server with --expose-gc passed directly to node (not via NODE_OPTIONS)
 echo "🟢 Starting server with ngrok integration..."
-node --expose-gc server-n8n-optimized.mjs
+node --expose-gc server-n8n-with-login.mjs
