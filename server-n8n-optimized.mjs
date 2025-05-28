@@ -14,7 +14,7 @@ puppeteer.use(StealthPlugin());
 // CRITICAL: Memory limits for handling 3000 individual n8n requests
 const MEMORY_LIMITS = {
   MAX_HEAP: '1536m',
-  SCREENSHOT_QUALITY: 35,     // Very low quality for memory conservation
+  SCREENSHOT_QUALITY: 60,     // Very low quality for memory conservation
   SCREENSHOT_WIDTH: 1280,      // Smaller screenshots
   SCREENSHOT_HEIGHT: 900,
   MAX_PAGES: 1,              // Single page only
